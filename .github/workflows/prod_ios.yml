@@ -35,7 +35,7 @@ jobs:
         with:
           ruby-version: '2.7'
 
-      - uses: maierj/fastlane-action@v2.0.1
+      - uses: maierj/fastlane-action@v2.1.0
         with:
           lane: 'prepare_ci'
           subdirectory: 'ios'
@@ -61,7 +61,7 @@ jobs:
 
       - run: flutter build ipa --release --build-number ${{ env.BUILD_NUMBER }} --build-name ${{ env.RELEASE_VERSION }}
 
-      - uses: maierj/fastlane-action@v2.0.1
+      - uses: maierj/fastlane-action@v2.1.0
         with:
           lane: 'release'
           subdirectory: 'ios'
